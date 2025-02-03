@@ -38,7 +38,17 @@ python downloader.py
 
 ## 🚀 Usage
 
-### 1️⃣ Download Videos & Playlists
+### 1️⃣ Manual Cookie Export (More Reliable)**
+
+1. **Install the `Get Cookies.txt` Chrome extension:**  
+   👉 [Download Here](https://chromewebstore.google.com/detail/get-cookiestxt-clean/ahmnmhfbokciafffnknlekllgcnafnie)  
+2. **Open YouTube & log in.**
+3. **Click the extension & export cookies.**
+4. **Save the file as `youtube_cookies.txt` inside the project folder.**
+
+✅ Now the script will **automatically detect** and use the cookies for downloading private videos!
+
+### 2️⃣ Download Videos & Playlists
 
 1. **Run the script**:
    ```bash
