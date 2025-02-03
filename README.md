@@ -46,7 +46,7 @@ python downloader.py
 3. **Click the extension & export cookies.**
 4. **Save the file as `youtube_cookies.txt` inside the project folder.**
 
-✅ Now the script will **automatically detect** and use the cookies for downloading private videos!
+✅ Now the script will **automatically detect** and use the cookies for downloading videos!
 
 ### 2️⃣ Download Videos & Playlists
 
