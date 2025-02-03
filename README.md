@@ -93,7 +93,7 @@ ERROR: You have requested merging of multiple formats but ffmpeg is not installe
 ```
 
 Make sure:
-- You downloaded **FFmpeg** and placed it in the `ffmpeg/` folder.
+- You downloaded **FFmpeg** 👉 [Download Here](https://www.ffmpeg.org/download.html)  and placed it in the `ffmpeg/` folder.
 - The correct structure is: `ffmpeg/bin/ffmpeg.exe`
 
 ---
