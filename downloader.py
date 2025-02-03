@@ -72,14 +72,19 @@ def display_fm_ascii():
     """Display 'F M' using binary numbers (1 and 0)."""
     fm_ascii = """
     
-    11111      000   000
-    1          0 0   0 0
-    11111      0  0 0  0
-    1          0   0   0
-    1          0       0
+    \     /  
+     \   /   
+      \ /    
+       V     
+
+    F   O   R
+
+    V   A   N   D   E   T   T   A
+
     
 🚀 Coded by Fawzy Moawad
-🔗 Visit: https://www.fawzymoawad.com for more source codes
+🔗 Visit: https://github.com/Fawzy-Moawad for more source codes
+    Visit My Website: https://www.fawzymoawad.com for more 
     """
     print(fm_ascii)
 
