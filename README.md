@@ -73,7 +73,7 @@ yt-dlp --cookies-from-browser firefox "https://www.youtube.com/playlist?list=YOU
 #### **Method 2: Manual Cookie Export (More Reliable)**
 
 1. **Install the `Get Cookies.txt` Chrome extension:**  
-   👉 [Download Here](https://chrome.google.com/webstore/detail/get-cookies-txt/)  
+   👉 [Download Here](https://chromewebstore.google.com/detail/get-cookiestxt-clean/ahmnmhfbokciafffnknlekllgcnafnie)  
 2. **Open YouTube & log in.**
 3. **Click the extension & export cookies.**
 4. **Save the file as `youtube_cookies.txt` inside the project folder.**
