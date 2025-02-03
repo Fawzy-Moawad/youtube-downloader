@@ -69,7 +69,7 @@ def download_videos(video_url, save_path):
             print("⚠️ Try re-exporting cookies or using a different network.")
 
 def display_fm_ascii():
-    """Display 'F M' using binary numbers (1 and 0)."""
+    """Display 'V For Vandetta'."""
     fm_ascii = """
     
     \     /  
@@ -84,7 +84,7 @@ def display_fm_ascii():
     
 🚀 Coded by Fawzy Moawad
 🔗 Visit: https://github.com/Fawzy-Moawad for more source codes
-    Visit My Website: https://www.fawzymoawad.com for more 
+    Visit My Website: https://www.fawzymoawad.com
     """
     print(fm_ascii)
 
