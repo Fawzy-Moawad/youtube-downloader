@@ -29,14 +29,19 @@ def select_download_folder():
     return folder if folder else DEFAULT_SAVE_PATH
 
 def check_cookies():
-    """Ensure cookies file exists."""
+    """Ensure cookies file exists, if not, extract them automatically from Chrome."""
     if not os.path.exists(COOKIES_FILE):
-        print("⚠️ ERROR: Cookies file is missing. Please export cookies from Chrome.")
-        print("👉 Follow these steps:\n"
-              "1️⃣ Install the 'Get Cookies.txt' Chrome Extension.\n"
-              "2️⃣ Open YouTube & log in.\n"
-              "3️⃣ Click the extension & export cookies to `youtube_cookies.txt` inside this folder.")
-        sys.exit(1)
+        print("🔍 Extracting YouTube cookies from Chrome...")
+        try:
+            subprocess.run(["yt-dlp", "--cookies-from-browser", "chrome", "--print-to-file", COOKIES_FILE], check=True)
+            print("✅ Cookies extracted successfully!")
+        except Exception:
+            print("⚠️ Failed to extract cookies. Make sure Chrome is open and logged into YouTube.")
+            print("👉 Follow these steps:\n"
+                  "1️⃣ Install the 'Get Cookies.txt' Chrome Extension.\n"
+                  "2️⃣ Open YouTube & log in.\n"
+                  "3️⃣ Click the extension & export cookies to `youtube_cookies.txt` inside this folder.")
+            sys.exit(1)
 
 def download_videos(video_url, save_path):
     """Download YouTube videos with authentication and error handling."""
@@ -58,9 +63,25 @@ def download_videos(video_url, save_path):
         try:
             ydl.download([video_url])
             print(f"✅ Download complete! Videos saved in: {save_path}")
+            display_fm_ascii()  # Display "F M" after download completes
         except Exception as e:
             print(f"❌ ERROR: {e}")
             print("⚠️ Try re-exporting cookies or using a different network.")
+
+def display_fm_ascii():
+    """Display 'F M' using binary numbers (1 and 0)."""
+    fm_ascii = """
+    
+    11111      000   000
+    1          0 0   0 0
+    11111      0  0 0  0
+    1          0   0   0
+    1          0       0
+    
+🚀 Coded by Fawzy Moawad
+🔗 Visit: https://www.fawzymoawad.com for more source codes
+    """
+    print(fm_ascii)
 
 if __name__ == "__main__":
     # Step 1: Install dependencies
